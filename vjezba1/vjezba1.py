@@ -21,42 +21,70 @@ import lab_gui
 
 
 # Zadatak 1
+'''
+Napisite funkciju koja vraca 2D homogenu matricu transformacija (np.array) koja radi rotaciju za kut theta
+'''
 def rot(theta):
-    # TODO 1.1
-    raise NotImplementedError
+    raise NotImplementedError # TODO 1.1 obrisi ovaj redak
 
-
+'''
+Napisite funkciju koja vraca 2D homogenu matricu transformacija (np.array) koja radi translaciju za vektor (x, y)
+'''
 def transl(x, y):
-    # TODO 1.2
-    raise NotImplementedError
+    raise NotImplementedError # TODO 1.2 obrisi ovaj redak
 
 
 # Zadatak 2
-def link_matrix(x, theta):
-    # TODO 2
-    raise NotImplementedError
+'''
+Napisite funkciju koja vraca umnozak homogenih matrica transormacije iz prvog zadatka,
+radimo s apsolutnim koordinatama, prvo djeluje matrica koja rotira za theta pa matrica koja translatira za L u smjeru nove x-osi
+'''
+def link_matrix(L, theta):
+    raise NotImplementedError # TODO 2 obrisi ovaj redak
 
 
 # Zadatak 3
+'''
+Napisite funkciju koja vraca listu matrica transformacija. Ulaz je lista parova oblika (L, theta) koji govori da je iduci koordinatni
+sustav rotiran za theta i translatiran za L u odnosu na prethodni.
+
+U izlaznoj listi potrebno je appendati transformacije na sljedeci nacin, prvi element je transformacija iz 0->1, drugi element je transformacija 0->2, treci 0->3 itd.
+
+Hint: (primijetite da k-ti element izlazne liste ovisi o (k-1) elementu), (koristite for petlju)
+'''
 def forward_kinematics(rows):
-    # rows = [(x_1, theta_1), (x_2, theta_2), ...]
+    # rows = [(L_1, theta_1), (L_2, theta_2), ...]
     # vraca [T_01, T_02, ..., T_0e]
-    # TODO 3
-    raise NotImplementedError
+    raise NotImplementedError # TODO 3 obrisi ovaj redak
 
 
 # Zadatak 4
+'''
+Ulaz - homogena matrica transformacije iz 0->(ee)
+Izlaz - pozicija izvrsnog clana (x, y) kao np.array
+'''
 def tcp_position(T):
-    # TODO 4.1
-    raise NotImplementedError
+    raise NotImplementedError    # TODO 4.1 obrisi ovaj redak
 
 
+'''
+Ulaz - homogena matrica transformacije iz 0->(ee)
+Izlaz - orijentacija izvrsnog clana (u nasem slucaju kut koji cini s x-osi koordinatnog sustava baze)\
+Hint: (morate iz rotacijskog dijela matrice transformacije izracunati kut)
+'''
 def tcp_angle(T):
-    # TODO 4.2
-    raise NotImplementedError
+    raise NotImplementedError  # TODO 4.2 obrisi ovaj redak
 
 
 # Zadatak 5
+'''
+Potrebno je simbolicki izracunati Jakobijan, ulaz je homogena matrica transformacije iz 0->(ee) u obliku simbolicke sympy matrice te lista simbola q.
+
+Izlazni Jakobijan mora biti isto sympy matrica.
+
+Trebate popuniti funckiju ispod
+
+'''
 # J = [dx/dq1  dx/dq2 ...]
 #     [dy/dq1  dy/dq2 ...]
 #     [dphi/dq1 dphi/dq2 ...]
